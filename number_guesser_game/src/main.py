@@ -16,19 +16,11 @@ def main():
         if score <= 0:
             print(f'The number was {number}')
             print('Game over! You ran out of attempts.')
-            if play_again():
-                main()
-            else:
-                print('Thank you for playing!')
             break
         user_input = get_valid_input('Enter your guess:')
         if user_input == number:
             print('Congratulations! You guessed correctly!')
             print(f'Your score is {score}')
-            if play_again():
-                main()
-            else:
-                print('Thank you for playing!')
             break
         elif user_input < number:
             score -= 10
@@ -38,7 +30,10 @@ def main():
             score -= 10
             print(f'Your score is {score}')
             print('Your guess is too high. Try again.')
-    
+    if play_again():
+        main()
+    else:
+        print('Thanks for playing!')
 
 
 if __name__=='__main__':
