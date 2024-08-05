@@ -64,8 +64,8 @@ class RandomPasswordGenerator(PasswordGenerator):
     def __init__(
         self,
         length: int,
-        include_numbers: Optional[bool] = None,
-        include_symbols: Optional[bool] = None) -> None:
+        include_numbers: bool = False,
+        include_symbols: bool = False) -> None:
         super().__init__()
         self.length = length
         self.character_set = string.ascii_letters
