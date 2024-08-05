@@ -2,7 +2,8 @@
 
 This project provides a set of classes for generating different types of passwords, including numeric PIN codes, random alphanumeric passwords, and memorable passwords composed of words. It also includes functionality to calculate the entropy of generated passwords, which can be useful for assessing their strength.
 
-his repository also contains unit tests for various password generation classes implemented in the `src.main_oop` module. The tests are designed to validate the functionality of different password generators, including PIN codes, random passwords, and memorable passwords. The tests also include checks for password entropy calculations.
+
+This repository also contains unit tests for various password generation classes implemented in the `src.main_oop` module. The tests are designed to validate the functionality of different password generators, including PIN codes, random passwords, and memorable passwords. The tests also include checks for password entropy calculations.
 
 ## Table of Contents
 
@@ -36,7 +37,7 @@ his repository also contains unit tests for various password generation classes 
 ## Usage
 
 To use the password generators, you can create instances of the desired generator class and call the generate_password method. Below is an example of how to use each generator:
-
+```python
 if __name__ == '__main__':
     # Generate a 6-digit PIN code
     pin_code_generator = PinCodeGenerator(6)
@@ -52,7 +53,7 @@ if __name__ == '__main__':
     memorable_password_generator = MemorablePasswordGenerator(3)
     memorable_password_generator.generate_password()
     memorable_password_generator.calculate_entropy()
-
+```
 ## Unit test
 The unit tests are implemented using the unittest framework. The following classes are tested:
 
