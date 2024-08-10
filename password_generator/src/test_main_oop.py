@@ -3,8 +3,7 @@ import string
 import unittest
 from unittest.mock import patch
 
-from src.main_oop import (  # Replace 'main' with the actual module name
-    MemorablePasswordGenerator, PinCodeGenerator, RandomPasswordGenerator)
+from src.main_oop import (MemorablePasswordGenerator, PinCodeGenerator, RandomPasswordGenerator)
 
 
 class TestPasswordGenerators(unittest.TestCase):
