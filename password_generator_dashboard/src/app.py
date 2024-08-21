@@ -3,6 +3,7 @@ from nltk.corpus import words
 from src.main_oop import (MemorablePasswordGenerator, PinCodeGenerator,
                         RandomPasswordGenerator)
 
+
 st.image("images/banner.png")
 st.title(":zap: Password Generator")
 
