@@ -23,8 +23,8 @@ Starting with any positive integer, replace the number by the sum of the squares
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/happy-numbers.git
-    cd happy-numbers
+    git clone https://github.com/somayehpakdel/Python_Projects.git
+    cd '05 happy_numbers'
     ```
 
 2. Create a virtual environment and activate it:
