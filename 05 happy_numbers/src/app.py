@@ -1,5 +1,5 @@
-import streamlit as st
 import matplotlib.pyplot as plt
+import streamlit as st
 from src.happy_number import happy_numbers
 
 
