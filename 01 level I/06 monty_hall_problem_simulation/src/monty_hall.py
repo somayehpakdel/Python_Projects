@@ -27,7 +27,7 @@ def monty_hall(swiched: bool) -> bool:
     return player_choice == prize_door
 
 
-def monty_hall_simulation(num_trials: int) -> float:
+def monty_hall_simulation(num_trials: int) -> int:
     """
     Simulates the Monty Hall problem multiple times and returns the win percentage.
 
@@ -35,7 +35,7 @@ def monty_hall_simulation(num_trials: int) -> float:
         num_trials (int): The number of trials to run.
 
     Returns:
-        float: The win percentage.
+        float: The win numbers.
     """
 
     wins_swiched = sum(monty_hall(True) for _ in range(num_trials))
