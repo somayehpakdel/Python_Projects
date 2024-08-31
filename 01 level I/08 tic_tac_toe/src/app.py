@@ -48,8 +48,8 @@ st.session_state['board'] = board_object.board
 st.session_state['message'] = board_object.message
 
 #Streamlit showcase
-
-st.image('images/tictactoe.png')
+col = st.columns([0.1, 0.1, 0.4, 0.2, 0.2])
+col[2].image('images/tictactoe.png', width=400)
 
 
 
