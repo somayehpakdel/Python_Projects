@@ -41,8 +41,8 @@ A simple and interactive contact management application built with Python and St
 
 1. Clone the repository:
 ```bash
-   git clone https://github.com/yourusername/contact_book.git
-   cd contact_book
+   git https://github.com/somayehpakdel/Python_Projects.git
+   cd '01 level I/07 contact book
 ```
 
 2. Create a virtual environment (optional but recommended):
