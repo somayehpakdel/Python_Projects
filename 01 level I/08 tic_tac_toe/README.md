@@ -9,16 +9,21 @@ A simple Tic Tac Toe game built with Python using Streamlit for the user interfa
 - Unit tests for game logic using pytest
 
 <p align="center">
-    <img src='./images/tictactoe_app.png' alt='happy_numbers', width=400>
+    <img src='./images/tictactoe_app.png' alt='tictactoe_app', width=400>
 </p>
 
-
-## Game Rules
-
-1. The game is played on a 3x3 grid.
-2. Players take turns placing their marks (X or O) in empty squares.
-3. The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins.
-4. If all squares are filled and no player has three in a row, the game is a tie.
+## File structure
+```
+📁08 tic_tac_toe
+  └── 📁images
+  └── 📁src
+      └── app.py
+      └── tic_tac_toe.py
+  └── 📁tests
+      └── test_tic_tac_toe.py
+  └── README.md
+  └── requirements.txt
+```
 
 ## Installation
 
