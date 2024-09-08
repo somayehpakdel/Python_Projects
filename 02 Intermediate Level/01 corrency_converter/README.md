@@ -9,6 +9,7 @@ A Python-based currency converter that fetches real-time exchange rates and conv
 - **Error Handling**: Handles various error scenarios, including invalid currency codes and network-related errors.
 - **Logging**: Logs important events and errors for better traceability.
 - **Streamlit App**: Provides a user-friendly interface for currency conversion.
+- **using pytest**: To test currency conversion functions by mocking requests.get and fixtures to clear the cache. 
 
 <p align="center">
     <img src='./images/currency_converter.png' alt='currency_converter', width=500>
