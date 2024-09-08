@@ -35,8 +35,9 @@ def get_exchange_rate(base_currency: str, target_currency: str) -> Tuple[float, 
     """
 
     url = f"https://api.exchangerate-api.com/v4/latest/{base_currency}"
+    response = requests.get(url)
+
     try:
-        response = requests.get(url)
         response.raise_for_status() # Raise an error for bad responses (4xx and 5xx)
         data = response.json()
         if target_currency not in data["rates"]:
@@ -45,7 +46,7 @@ def get_exchange_rate(base_currency: str, target_currency: str) -> Tuple[float, 
         time_last_updated = data["time_last_updated"]
         return exchange_rate, time_last_updated
 
-    except requests.exceptions.RequestException as e:
+    except requests.exceptions.HTTPError as e:
         logger.error(f'Network error occurred: {e}')
         raise 
     except ValueError as e:
