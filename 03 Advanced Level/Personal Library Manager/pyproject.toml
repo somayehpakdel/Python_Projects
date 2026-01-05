@@ -1,0 +1,25 @@
+[project]
+name = "app"
+version = "0.1.0"
+description = "Your application description"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic[email]",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "requests",
+    "python-dotenv",
+    "python-multipart",
+    "streamlit",
+    "pandas",
+    "pydantic-settings",
+    "pyjwt",
+    "pwdlib[argon2]",
+    "alembic>=1.17.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

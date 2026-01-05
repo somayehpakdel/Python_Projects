@@ -1,0 +1,32 @@
+meta {
+  name: Create Book
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{base_url}}/api/v1/books/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{jwt_token}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "title": "{{Book_Title}}",
+    "isbn": "{{Isbn}}",
+    "author": "{{Author}}"
+  }
+}
+
+script:post-response {
+  // Check if book was created successfully
+  if (res.status === 201) {
+    // Save the 'id' from the response to a variable named 'book_id'
+    bru.setEnvVar("book_id", res.body.id);
+  }
+}

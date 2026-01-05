@@ -1,0 +1,24 @@
+meta {
+  name: Patch me
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{base_url}}/api/v1/users/me
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{jwt_token}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "old_password": "{{test_password}}",
+  "password": "{{test_new_password}}",
+  "confirm_password": "{{test_new_password}}"
+  }
+}

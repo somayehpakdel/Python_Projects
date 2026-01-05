@@ -1,0 +1,27 @@
+meta {
+  name: Post tokens
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/api/v1/users/tokens
+  body: formUrlEncoded
+}
+
+script:pre-request {
+  // This will print the values to your terminal when you run 'bru run'
+  console.log("Username is:",bru.getEnvVar("test_username"));
+  console.log("Password is:",bru.getEnvVar("test_password"));
+}
+
+body:form-urlencoded {
+  username: {{test_username}}
+  password: {{test_password}}
+}
+
+script:post-response {
+  if (res.status === 200) {
+    bru.setEnvVar("jwt_token", res.body.access_token);
+  }
+}

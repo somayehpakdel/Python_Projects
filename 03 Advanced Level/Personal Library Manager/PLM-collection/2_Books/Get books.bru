@@ -1,0 +1,14 @@
+meta {
+  name: Get All Books
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{base_url}}/api/v1/books/
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{jwt_token}}
+}

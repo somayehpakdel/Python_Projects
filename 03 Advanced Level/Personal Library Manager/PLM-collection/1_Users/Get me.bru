@@ -1,0 +1,18 @@
+meta {
+  name: Get Me
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/api/v1/users/me
+}
+
+headers {
+  Authorization: Bearer {{jwt_token}}
+}
+
+assert {
+  res.status: eq 200
+  res.body.username: eq {{test_username}}
+}

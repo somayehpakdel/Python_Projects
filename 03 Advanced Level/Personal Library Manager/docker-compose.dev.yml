@@ -1,0 +1,11 @@
+services:
+  web:
+    # 1. Mount local code to container (Overrides COPY in Dockerfile)
+    volumes:
+      - ./app:/app/app
+      - ./alembic:/app/alembic
+      - ./alembic.ini:/app/alembic.ini
+      - ./pyproject.toml:/app/pyproject.toml
+    
+    # 2. Override command to enable Hot Reload
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload 

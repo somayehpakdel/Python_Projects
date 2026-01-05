@@ -1,0 +1,14 @@
+meta {
+  name: Delete Book
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{base_url}}/api/v1/books/{{book_id}}
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{jwt_token}}
+}
